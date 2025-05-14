@@ -22,8 +22,9 @@ function App() {
   // Esercizio 3
   const tasks: Task[] = [
     { id: '1', title: 'Studiare React', completed: true },
-    { id: '2', title: 'Fare la spesa', completed: true },
-    { id: '3', title: 'Scrivere codice', completed: false },
+    { id: '2', title: 'Scrivere codice', completed: false },
+    { id: '3', title: 'Fare la spesa', completed: true },
+    { id: '4', title: 'Portare fuori il cane', completed: false },
   ];
 
   // Esercizio 6 - Esercizio 9
@@ -69,7 +70,7 @@ function App() {
 
       <div>
         <UserCard name="Alessandro" age={24} isAdmin={true}/>
-        <UserCard name="Laura" age={28} isAdmin={false} />
+        <UserCard name="Laura" age={28} />
       </div>
 
       <h1>Esercizio 2</h1>

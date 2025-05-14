@@ -18,8 +18,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             setTimeout(() => {
                 setUser(loggedUser)
                 resolve();
-                console.log("Login effettuato");
             }, 2000)
+            console.log("Login effettuato")
 
         })
     };

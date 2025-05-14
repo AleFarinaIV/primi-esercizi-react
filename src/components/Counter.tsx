@@ -23,16 +23,9 @@ export function Counter(props: CounterProps) {
     return (
         <div>
             <h4>Contatore: {count}</h4>
-            {
-                count == 0
-                ? <button disabled onClick={decrement}>-</button>
-                : <button onClick={decrement}>-</button>
-            }
-            {
-                count == 10
-                ? <button disabled onClick={increment}>+</button>
-                : <button onClick={increment}>+</button>
-            }
+            <button onClick={decrement} disabled={count <= 0}>-</button>
+
+            <button onClick={increment} disabled={count >= 10}>+</button>
         </div>
     )
 }

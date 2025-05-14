@@ -13,7 +13,7 @@ export const UserList = (props: UserListProps) => {
         <ul>
             {props.users.map( user => (
                 <li key={user.id} style={{ color: user.isOnline ? 'green' : 'red', marginBottom: 2 }}>
-                    {user.name} - {user.isOnline ? 'Online' : 'offline'}
+                    {user.name} - {user.isOnline ? 'Online' : 'Offline'}
                 </li>
             ))}
         </ul>
