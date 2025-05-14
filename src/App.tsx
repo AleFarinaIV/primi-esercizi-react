@@ -9,6 +9,8 @@ import { UserList } from "./components/UserList";
 import { LikeButton } from "./components/LikeButton";
 import { ChiamataUser } from "./components/ChiamataUser";
 import { List } from "./components/List";
+import { AuthProvider } from "./context/AuthContext";
+import { Dashboard } from "./components/Dashboard";
 
 function App() {
 
@@ -38,6 +40,21 @@ function App() {
 
   //Esercizio 9
   const fruits = ['🍎 Apple', '🍌 Banana', '🍇 Grape'];
+
+  // esempio di Promise
+  const wait = () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("Fatto!");
+      }, 2000);
+    });
+  };
+
+  wait().then(result => {
+    console.log(result); // Dopo 2 secondi stampa "Fatto!"
+  });
+
+
   return (
     <>
       <h1>Esercizio 1</h1>
@@ -210,6 +227,10 @@ function App() {
               
         Usa il contesto in un'applicazione demo.
       */}
+
+      <AuthProvider>
+        <Dashboard />
+      </AuthProvider>
     </>
   )
 }
